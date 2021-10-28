@@ -94,12 +94,12 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
-        if(is_null($post)){
-         $response =  [ 
-               'success'=> false,
-            'message'=> "Post não encontrado"
-        ];
-           return response()->json($response, 403);
+        if (is_null($post)) {
+            $response =  [
+                'success' => false,
+                'message' => "Post não encontrado"
+            ];
+            return response()->json($response, 403);
         }
 
         $response = [
@@ -107,7 +107,6 @@ class PostController extends Controller
             'data' => new  PostResource($post),
             'message' => 'Post recuparado!'
         ];
-
     }
 
     /**
@@ -128,9 +127,39 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $input = $request->all();
+        $input = $request->all();
+
+        $validator = Validator::make(
+            $input,
+            [
+                'title' => 'required|min:3|max:25',
+                "content" => 'required|min:5|max255'
+
+
+            ]
+        );
+        if ($validator->fails()) {
+            $response = [
+                'success' => true,
+
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 403);
+        }
+
+        $post->title = $input['title'];
+        $post->content = $input['content'];
+        $post->save();
+
+        $response = [
+            'success' => true,
+            'data' => new  PostResource($post),
+            'message' => 'Post recuparado!'
+        ];
+           return response()->json($response, 200);
     }
 
     /**
