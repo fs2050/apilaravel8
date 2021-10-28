@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Resources\PostResource;
+use validator;
+
 
 class PostController extends Controller
 {
@@ -23,10 +25,10 @@ class PostController extends Controller
         //return $posts->toJson();
         $response = [
             'success' => true,
-            'data'=> PostResource::collection($posts),
+            'data' => PostResource::collection($posts),
             'message' => 'Post enviado com sucesso!'
         ];
-            return response()->json($response, 200);
+        return response()->json($response, 200);
     }
 
     /**
@@ -47,7 +49,39 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        $validator = Validator::make(
+            $input,
+            [
+                'title' => 'required|min:3|max:25',
+                "content" => 'required|min:5|max255'
+
+
+            ]
+        );
+        if ($validator->fails()) {
+            $response = [
+                'success' => true,
+
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 403);
+        }
+
+
+
+
+
+        $post = Post::create($input);
+
+        $response = [
+            'success' => true,
+            'data' => new  PostResource($post),
+            'message' => 'Post criado com sucesso!'
+        ];
+
+        return response()->json($response, 200);
     }
 
     /**
@@ -58,7 +92,22 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+
+        if(is_null($post)){
+         $response =  [ 
+               'success'=> false,
+            'message'=> "Post não encontrado"
+        ];
+           return response()->json($response, 403);
+        }
+
+        $response = [
+            'success' => true,
+            'data' => new  PostResource($post),
+            'message' => 'Post recuparado!'
+        ];
+
     }
 
     /**
