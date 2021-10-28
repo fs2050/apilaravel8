@@ -24,7 +24,7 @@ class PostController extends Controller
         $response = [
             'success' => true,
             'data'=> PostResource::collection($posts),
-            'message' => 'Post Sucesso!'
+            'message' => 'Post enviado com sucesso!'
         ];
             return response()->json($response, 200);
     }
