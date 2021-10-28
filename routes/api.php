@@ -15,11 +15,11 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('api/testeing', function(){
+Route::get('https://myapil8.herokuapp.com/testeing', function(){
     return "hello world";
 });
 
-Route::resource('api/post', PostController::class);
+Route::resource('post', PostController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
