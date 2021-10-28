@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Resources\PostResource;
-//use Illuminate\Support\Facades\Validator;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 
 
 class PostController extends Controller
@@ -47,7 +46,7 @@ class PostController extends Controller
         $input = $request->all();
 
         $validator = Validator::make(
-            $input,
+           
             [
                 'title' => 'required|min:3|max:25',
                 "content" => 'required|min:5|max255'
@@ -103,7 +102,7 @@ class PostController extends Controller
         $input = $request->all();
 
         $validator = Validator::make(
-            $input,
+         
             [
                 'title' => 'required',
                 "content" => 'required'
