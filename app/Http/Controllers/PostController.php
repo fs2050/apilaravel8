@@ -55,13 +55,12 @@ class PostController extends Controller
             ]
         );
         if ($validator->fails()) {
-            // return response()->json($response, 403);
+
             return $this->errorResponse('Validação com erro!', $validator->errors());
         }
 
         $post = Post::create($input);
 
-        //return response()->json($response, 200);
         return $this->succesResponse(new PostResource($post), 'Post criado com sucesso!');
     }
 
@@ -106,7 +105,7 @@ class PostController extends Controller
             $input,
             [
                 'title' => 'required|min:3|max:25',
-                "content" => 'required'
+                "content" => 'required|min:5|max:255'
 
 
             ]
