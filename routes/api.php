@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('testeing', function(){
+Route::get('./testeing', function(){
     return "hello world";
 });
 
