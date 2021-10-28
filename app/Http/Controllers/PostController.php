@@ -104,8 +104,8 @@ class PostController extends Controller
         $validator = Validator::make(
             $input,
             [
-                'title' => 'required|min:3|max:25',
-                "content" => 'required|min:5|max:255'
+                'title' => 'required',
+                "content" => 'required'
 
 
             ]
