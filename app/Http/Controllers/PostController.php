@@ -23,7 +23,7 @@ class PostController extends Controller
 
         $posts = Post::all();
         //return $posts->toJson();
-       
+
 
         return $this->successResponse(PostResource::collection($posts), 'Post enviado com sucesso!');
     }
@@ -31,16 +31,6 @@ class PostController extends Controller
 
 
 
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -65,16 +55,14 @@ class PostController extends Controller
             ]
         );
         if ($validator->fails()) {
-           // return response()->json($response, 403);
-            return $this-> errorResponse('Validação com erro!', $validator->errors());
+            // return response()->json($response, 403);
+            return $this->errorResponse('Validação com erro!', $validator->errors());
         }
 
         $post = Post::create($input);
 
         //return response()->json($response, 200);
-        return $this-> succesResponse(new PostResource($post), 'Post criado com sucesso!');
-
-
+        return $this->succesResponse(new PostResource($post), 'Post criado com sucesso!');
     }
 
     /**
@@ -88,11 +76,9 @@ class PostController extends Controller
         $post = Post::find($id);
 
         if (is_null($post)) {
-           
+
             //return response()->json($response, 403);
             return $this->errorResponse('Post não encontrado!');
-
-
         }
 
         $response = [
@@ -103,16 +89,6 @@ class PostController extends Controller
         return $this->succesResponse(new PostResource($post), 'Post encontrado!');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -136,15 +112,14 @@ class PostController extends Controller
             ]
         );
         if ($validator->fails()) {
-            return $this-> errorResponse('Validação com erro!', $validator->errors()); 
+            return $this->errorResponse('Validação com erro!', $validator->errors());
         }
 
         $post->title = $input['title'];
         $post->content = $input['content'];
         $post->save();
 
-        return $this->successResposnse( new PostResource($post), 'Post criado com sucesso!');
-    
+        return $this->successResposnse(new PostResource($post), 'Post criado com sucesso!');
     }
 
     /**
@@ -156,7 +131,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return $this->successResposnse( [], 'Post criado com sucesso!');
-
+        return $this->successResposnse([], 'Post criado com sucesso!');
     }
 }

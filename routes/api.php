@@ -16,10 +16,12 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/teste', function(){
-    return "hello world";
+    return "hello world Update and i understand";
 });
 
-Route::resource('/post', PostController::class);
+Route::resource('/post', PostController::class)->except([
+    'create', 'edit'
+]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
