@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Resources\PostResource;
-
 use Illuminate\Support\Facades\Validator;
 
 
@@ -24,13 +23,14 @@ class PostController extends Controller
 
         $posts = Post::all();
         //return $posts->toJson();
-        $response = [
-            'success' => true,
-            'data' => PostResource::collection($posts),
-            'message' => 'Post enviado com sucesso!'
-        ];
-        return response()->json($response, 200);
+       
+
+        return $this->successResponse(PostResource::collection($posts), 'Post enviado com sucesso!');
     }
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -48,6 +48,9 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function store(Request $request)
     {
         $input = $request->all();
@@ -62,27 +65,16 @@ class PostController extends Controller
             ]
         );
         if ($validator->fails()) {
-            $response = [
-                'success' => true,
-
-                'message' => $validator->errors()
-            ];
-            return response()->json($response, 403);
+           // return response()->json($response, 403);
+            return $this-> errorResponse('Validação com erro!', $validator->errors());
         }
-
-
-
-
 
         $post = Post::create($input);
 
-        $response = [
-            'success' => true,
-            'data' => new  PostResource($post),
-            'message' => 'Post criado com sucesso!'
-        ];
+        //return response()->json($response, 200);
+        return $this-> succesResponse(new PostResource($post), 'Post criado com sucesso!');
 
-        return response()->json($response, 200);
+
     }
 
     /**
@@ -96,11 +88,11 @@ class PostController extends Controller
         $post = Post::find($id);
 
         if (is_null($post)) {
-            $response =  [
-                'success' => false,
-                'message' => "Post não encontrado"
-            ];
-            return response()->json($response, 403);
+           
+            //return response()->json($response, 403);
+            return $this->errorResponse('Post não encontrado!');
+
+
         }
 
         $response = [
@@ -108,6 +100,7 @@ class PostController extends Controller
             'data' => new  PostResource($post),
             'message' => 'Post recuparado!'
         ];
+        return $this->succesResponse(new PostResource($post), 'Post encontrado!');
     }
 
     /**
@@ -143,24 +136,15 @@ class PostController extends Controller
             ]
         );
         if ($validator->fails()) {
-            $response = [
-                'success' => true,
-
-                'message' => $validator->errors()
-            ];
-            return response()->json($response, 403);
+            return $this-> errorResponse('Validação com erro!', $validator->errors()); 
         }
 
         $post->title = $input['title'];
         $post->content = $input['content'];
         $post->save();
 
-        $response = [
-            'success' => true,
-            'data' => new  PostResource($post),
-            'message' => 'Post recuparado!'
-        ];
-           return response()->json($response, 200);
+        return $this->successResposnse( new PostResource($post), 'Post criado com sucesso!');
+    
     }
 
     /**
@@ -169,8 +153,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return $this->successResposnse( [], 'Post criado com sucesso!');
+
     }
 }
