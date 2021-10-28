@@ -15,7 +15,11 @@ use App\Http\Controllers\PostController;
 |
 */
 
+Route::get('testeing', function(){
+    return "hello world";
+});
 
+Route::resource('post', PostController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
