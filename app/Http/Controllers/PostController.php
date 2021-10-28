@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Resources\PostResource;
-use Illuminate\Support\Facades\Validator;
+//use Illuminate\Support\Facades\Validator;
+use validator;
 
 
 class PostController extends Controller
@@ -83,7 +84,7 @@ class PostController extends Controller
         $response = [
             'success' => true,
             'data' => new  PostResource($post),
-            'message' => 'Post recuparado!'
+            'message' => 'Post recuperado!'
         ];
         return $this->succesResponse(new PostResource($post), 'Post encontrado!');
     }
@@ -118,7 +119,7 @@ class PostController extends Controller
         $post->content = $input['content'];
         $post->save();
 
-        return $this->successResposnse(new PostResource($post), 'Post criado com sucesso!');
+        return $this->successResposnse(new PostResource($post), 'Post atualizado com sucesso!');
     }
 
     /**
@@ -130,6 +131,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return $this->successResposnse([], 'Post criado com sucesso!');
+        return $this->successResposnse([], 'Post deletado com sucesso!');
     }
 }
