@@ -16,7 +16,10 @@ class PostController extends Controller
     {
         //return "hello get rersoure";
 
-        dd(Post::all());
+        //dd(Post::all());
+
+        $posts = Post::all();
+        return $posts->toJson();
     }
 
     /**
