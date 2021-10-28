@@ -19,7 +19,13 @@ class PostController extends Controller
         //dd(Post::all());
 
         $posts = Post::all();
-        return $posts->toJson();
+        //return $posts->toJson();
+        $response = [
+            'success' => true,
+            'data'=> $posts,
+            'message' => 'Post Sucesso!'
+        ];
+            return response()->json($response, 200);
     }
 
     /**
