@@ -28,7 +28,7 @@ class AuthController extends Controller
             return $this->errorResponse('Validação com erro!', $validator->errors());
         }
 
-        $checkEmail = User::where(['email'])->first();
+        $checkEmail = User::where(['email', input['email']])->first();
 
         if ($checkEmail) {
             return $this->errorResponse('E-mail já existe!');
@@ -48,40 +48,15 @@ class AuthController extends Controller
         return $this->successResponse($response, "Usuario Registrado com sucesso!");
     }
 
-    public function login(Request $request)
+    public function login()
     {
-        $input = $request->all();
 
-        $validator = Validator::make(
-            $input,
-            [
 
-                'email' => 'required|email',
-                'password' => 'required',
-            ]
-        );
 
-        if (Auth::attempt(
-            [
-                'email' => $request->email,
-                'password' => $request->password
-            ]
-        )) {
-            $user = Auth::user();
-            $response =
-            [
-                'token' => $user->createToken('fsCoding')->plainTextToken,
-                'name' => $user->name,
-                'email' => $user->email
-            ];
-        return $this->successResponse($response, "Usuario Registrado com sucesso!");
-    }
 
-        return $this->successResponse($response, "Login do Usuario com sucesso!");
 
-         else{
-            return $this->errorResponse('Seu e-mail ou senha não é válido!');
-        }
+
+
 
 
 }
