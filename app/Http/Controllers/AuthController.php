@@ -34,6 +34,7 @@ class AuthController extends Controller
         }
 
         $input['password'] = bcrypt($input['password']);
+        $input['password2'] = bcrypt($input['password2']);
        
         $user = User::create($input);
 
