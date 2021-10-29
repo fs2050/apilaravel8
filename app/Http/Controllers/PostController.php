@@ -61,7 +61,7 @@ class PostController extends Controller
 
         $post = Post::create($input);
 
-        return $this->succesResponse(new PostResource($post), 'Post criado com sucesso!');
+        return $this->successResponse(new PostResource($post), 'Post criado com sucesso!');
     }
 
     /**
@@ -85,7 +85,7 @@ class PostController extends Controller
             'data' => new  PostResource($post),
             'message' => 'Post recuperado!'
         ];
-        return $this->succesResponse(new PostResource($post), 'Post encontrado!');
+        return $this->successResponse(new PostResource($post), 'Post encontrado!');
     }
 
 
