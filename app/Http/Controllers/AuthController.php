@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\models\user;
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -47,6 +47,6 @@ class AuthController extends Controller
     }
 
     public function login(){
-        
+
     }
 }
