@@ -49,7 +49,7 @@ class PostController extends Controller
             $input,
             [
                 'title' => 'required|min:3|max:25',
-                "content" => 'required|min:5|max255'
+                'content' => 'required|min:5|max255'
 
 
             ]
