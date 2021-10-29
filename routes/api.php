@@ -16,18 +16,21 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::post('/register',[AuthController::class, 'register'] )->name("registro");
-Route::post('/login',[AuthController::class, 'login'] )->name("login");
+Route::post('register',[AuthController::class, 'register'] );
+Route::post('login',[AuthController::class, 'login'] )->name("login");
 
 
-Route::get('/teste', function(){
-    return "hello world Update and i understand";
-});
+
 
 
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('/post', PostController::class)->except([
         'create', 'edit'
     ]);
-    
+
+});
+
+
+Route::get('/teste', function(){
+    return "hello world Update and i understand";
 });

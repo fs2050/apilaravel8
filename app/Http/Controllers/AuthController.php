@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -17,8 +18,8 @@ class AuthController extends Controller
                 'name' => 'required',
                 'email' => 'required',
                 'password' => 'required',
-                'password2' => 'required',
-              
+                'password2' => 'required|same:password',
+
             ]
         );
         if ($validator->fails()) {
@@ -28,27 +29,43 @@ class AuthController extends Controller
 
         $checkEmail = User::where(['email'])->first();
 
-        if($checkEmail){
+        if ($checkEmail) {
             return $this->errorResponse('E-mail já existe!');
-
         }
 
         $input['password'] = bcrypt($input['password']);
-        $input['password2'] = bcrypt($input['password2']);
-       
+
+
         $user = User::create($input);
 
-        $response = 
-        [
-            'token' => $user->createToken('fsCoding')->plainTextToken,
-            'name' => $user->name,
-            'email'=> $user->email
-        ];
+        $response =
+            [
+                'token' => $user->createToken('fsCoding')->plainTextToken,
+                'name' => $user->name,
+                'email' => $user->email
+            ];
         return $this->successResponse($response, "Usuario Registrado com sucesso!");
-
     }
 
-    public function login(){
+    public function login(Request $request)
+    {
 
+        if (Auth::attempt(
+            [
+                'email' => $request->email,
+                'password' => $request->password
+            ]
+        )) {
+            $user = Auth::user();
+            $response =
+                [
+                    'token' => $user->createToken('fsCoding')->plainTextToken,
+                    'name' => $user->name,
+                    'email' => $user->email
+                ];
+            return $this->successResponse($response, "Login do Usuario com sucesso!");
+        }else{
+            return $this->errorResponse('Seu e-mail ou senha não é válido!');
+        }
     }
 }
