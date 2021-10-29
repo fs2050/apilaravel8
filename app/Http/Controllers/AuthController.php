@@ -24,6 +24,14 @@ class AuthController extends Controller
 
             return $this->errorResponse('Validação com erro!', $validator->errors());
         }
+
+        $checkEmail = User::where(['email'])->first();
+
+        if($checkEmail){
+            return $this->errorResponse('E-mail já existe!');
+
+        }
+
         $input['password'] = bcrypt($input['password']);
        
         $user = User::create($input);
@@ -36,5 +44,9 @@ class AuthController extends Controller
         ];
         return $this->successResponse($response, "Usuario Registrado com sucesso!");
 
+    }
+
+    public function login(){
+        
     }
 }
