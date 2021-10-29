@@ -118,7 +118,7 @@ class PostController extends Controller
         $post->content = $input['content'];
         $post->save();
 
-        return $this->successResposnse(new PostResource($post), 'Post atualizado com sucesso!');
+        return $this->successResponse(new PostResource($post), 'Post atualizado com sucesso!');
     }
 
     /**
@@ -130,6 +130,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return $this->successResposnse([], 'Post deletado com sucesso!');
+        return $this->successResponse([], 'Post deletado com sucesso!');
     }
 }
