@@ -77,7 +77,7 @@ class PostController extends Controller
         if (is_null($post)) {
 
             //return response()->json($response, 403);
-            return $this->errorResponse('Post não encontrado!');
+            return $this->errorResponse('Post não encontrado, provavelmente foi deletado!');
         }
 
         $response = [
@@ -85,7 +85,7 @@ class PostController extends Controller
             'data' => new  PostResource($post),
             'message' => 'Post recuperado!'
         ];
-        return $this->successResponse(new PostResource($post), 'Post encontrado, provavelmente foi deletado!');
+        return $this->successResponse(new PostResource($post), 'Post encontrado!');
     }
 
 
@@ -130,6 +130,6 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        return $this->successResponse([], 'Post deletado com sucesso!');
+        return $this->successResposnse([], 'Post deletado com sucesso!');
     }
 }
