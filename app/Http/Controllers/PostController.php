@@ -85,7 +85,7 @@ class PostController extends Controller
             'data' => new  PostResource($post),
             'message' => 'Post recuperado!'
         ];
-        return $this->successResponse(new PostResource($post), 'Post encontrado!');
+        return $this->successResponse(new PostResource($post), 'Post encontrado, provavelmente foi deletado!');
     }
 
 
