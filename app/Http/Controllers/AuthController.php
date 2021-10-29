@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
+
 class AuthController extends Controller
 {
     public function register(Request $request)
@@ -49,6 +50,16 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        $input = $request->all();
+
+        $validator = Validator::make(
+            $input,
+            [
+
+                'email' => 'required|email',
+                'password' => 'required',
+            ]
+        );
 
         if (Auth::attempt(
             [
@@ -64,7 +75,7 @@ class AuthController extends Controller
                     'email' => $user->email
                 ];
             return $this->successResponse($response, "Login do Usuario com sucesso!");
-        }else{
+        } else {
             return $this->errorResponse('Seu e-mail ou senha não é válido!');
         }
     }
