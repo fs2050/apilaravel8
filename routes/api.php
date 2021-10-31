@@ -24,7 +24,7 @@ Route::post('/login',[AuthController::class, 'login'] )->name("login");
 
 
 Route::middleware('auth:sanctum')->group( function () {
-    Route::resource('/get', PostController::class)->except([
+    Route::resource('/post', PostController::class)->except([
         'create', 'edit'
     ]);
 
