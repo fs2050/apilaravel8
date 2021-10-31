@@ -28,7 +28,7 @@ class AuthController extends Controller
             return $this->errorResponse('Validação com erro!', $validator->errors());
         }
 
-        $checkEmail = User::where(["email", $input['email']])->first();
+        $checkEmail = User::where("email", $input['email'])->first();
 
         if ($checkEmail) {
             return $this->errorResponse('E-mail já existe!');
