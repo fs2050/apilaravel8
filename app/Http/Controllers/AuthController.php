@@ -49,12 +49,19 @@ class AuthController extends Controller
     }
 
     public function login(Request $request)
-    {$input = $request->all();
-        $validator = Validator::make($input, [
-            'email' => $request->email,
-                'password' => $request->password
-        ]);
-        if($validator->fails()){
+    {
+        $input = $request->all();
+        $validator = Validator::make(
+            $input,
+            [
+
+                'email' => 'required|email',
+                'password' => 'required'
+              ,
+
+            ]
+        );
+        if ($validator->fails()) {
             return $this->errorResponse('Validation Error', $validator->errors());
         }
         if (Auth::attempt(
@@ -65,16 +72,14 @@ class AuthController extends Controller
         )) {
             $user = Auth::user();
             $response =
-            [
-                'token' => $user->createToken('fsCoding')->plainTextToken,
-                'name' => $user->name,
-                'email' => $user->email
-            ];
+                [
+                    'token' => $user->createToken('fsCoding')->plainTextToken,
+                    'name' => $user->name,
+                    'email' => $user->email
+                ];
             return $this->successResponse($response, "Login do Usuario com sucesso!");
-        } else{
+        } else {
             return $this->errorResponse('Seu e-mail ou senha não é válido!');
         }
-
-
-}
+    }
 }
