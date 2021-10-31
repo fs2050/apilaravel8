@@ -19,7 +19,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
 
-  
+        '$primaryKey = personal_access_tokens',
         'email',
         'password'
     ];
