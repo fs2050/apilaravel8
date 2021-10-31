@@ -19,7 +19,7 @@ class AuthController extends Controller
                 'name' => 'required',
                 'email' => 'required|email',
                 'password' => 'required',
-                'password2' => 'required|same:password',
+                //'password2' => 'required|same:password',
 
             ]
         );
@@ -54,7 +54,7 @@ class AuthController extends Controller
         $validator = Validator::make(
             $input,
             [
-    
+
                 'email' => 'required|email',
                 'password' => 'required',
 
