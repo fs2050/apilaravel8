@@ -54,10 +54,10 @@ class AuthController extends Controller
         $validator = Validator::make(
             $input,
             [
-
+            
                 'email' => 'required|email',
-                'password' => 'required'
-              ,
+                'password' => 'required',
+
 
             ]
         );
