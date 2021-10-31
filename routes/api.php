@@ -16,15 +16,15 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::POST('register',[AuthController::class, 'register'] )->name("register");
-Route::POST('/login',[AuthController::class, 'login'] )->name("login");
+Route::post('/register',[AuthController::class, 'register'] )->name("register");
+Route::post('/login',[AuthController::class, 'login'] )->name("login");
 
 
 
 
 
 Route::middleware('auth:sanctum')->group( function () {
-    Route::resource('get', PostController::class)->except([
+    Route::resource('/post', PostController::class)->except([
         'create', 'edit'
     ]);
 
