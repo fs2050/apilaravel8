@@ -105,7 +105,9 @@ class PostController extends Controller
             $input,
             [
                 'title' => 'required',
-                'content' => 'required'
+                'content' => 'required',
+                'created_at' => 'required',
+                'updated_at' => 'required'
 
 
             ]
