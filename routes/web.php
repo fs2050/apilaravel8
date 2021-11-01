@@ -12,6 +12,51 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/register',[AuthController::class, 'register'] )->name("register");
+Route::get('/login',[AuthController::class, 'login'] )->name("login");
+
+
+
+
+
+Route::middleware('auth:sanctum')->group( function () {
+    Route::resource('/get', PostController::class)->except([
+        'create', 'edit'
+    ]);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/teste', function(){
+    return "hello world Update and i understand";
+});
+
 
 
 Route::get('/', function () {

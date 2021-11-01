@@ -118,8 +118,6 @@ class PostController extends Controller
 
         $post->title = $input['title'];
         $post->content = $input['content'];
-        $post->created_at = $input['created_at'];
-        $post->updated_at = $input['updated_at'];
         $post->save();
 
         return $this->successResponse(new PostResource($post), 'Post atualizado com sucesso!');
