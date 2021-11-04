@@ -14,6 +14,23 @@ return [
     | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
     |
     */
+      /*
+    |--------------------------------------------------------------------------
+    | Laravel CORS
+    |--------------------------------------------------------------------------
+    |
+    | allowedOrigins, allowedHeaders and allowedMethods can be set to array('*')
+    | to accept any value.
+    |
+    */
+
+    'supportsCredentials' => true,
+    //'allowedOrigins' => ['*'],
+    'allowedOriginsPatterns' => [],
+    'allowedHeaders' => ['X-Requested-With', 'content-type', 'Accept', 'Authorization'],
+    'allowedMethods' => ['OPTIONS', 'GET', 'POST', 'PUT',  'DELETE'],
+    'exposedHeaders' => [],
+    'maxAge' => 0,
 
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
 

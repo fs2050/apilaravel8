@@ -19,14 +19,16 @@ use App\Http\Controllers\AuthController;
 Route::post('/register',[AuthController::class, 'register'] )->name("register");
 Route::post('/login',[AuthController::class, 'login'] )->name("login");
 
-
+Route::resource('post', PostController::class)->except([
+    'create', 'edit'
+]);
 
 
 
 Route::middleware('auth:sanctum')->group( function () {
-    Route::resource('/post', PostController::class)->except([
+  /*   Route::resource('/post', PostController::class)->except([
         'create', 'edit'
-    ]);
+    ]); */
 
 });
 
