@@ -24,14 +24,6 @@ return [
     |
     */
 
-    'supportsCredentials' => true,
-    //'allowedOrigins' => ['*'],
-    'allowedOriginsPatterns' => [],
-    'allowedHeaders' => ['X-Requested-With', 'content-type', 'Accept', 'Authorization'],
-    'allowedMethods' => ['OPTIONS', 'GET', 'POST', 'PUT',  'DELETE'],
-    'exposedHeaders' => [],
-    'maxAge' => 0,
-
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],

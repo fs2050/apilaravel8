@@ -26,10 +26,10 @@ Route::resource('post', PostController::class)->except([
 
 
 Route::middleware('auth:sanctum')->group( function () {
-  /*   Route::resource('/post', PostController::class)->except([
+   /*  Route::resource('/post', PostController::class)->except([
         'create', 'edit'
-    ]); */
-
+    ]);
+ */
 });
 
 
