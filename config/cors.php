@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'paths' => ['*', 'sanctum/csrf-cookie'],
+    'paths' => ['https://myapil8.herokuapp.com/api/', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 
