@@ -14,17 +14,8 @@ return [
     | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
     |
     */
-      /*
-    |--------------------------------------------------------------------------
-    | Laravel CORS
-    |--------------------------------------------------------------------------
-    |
-    | allowedOrigins, allowedHeaders and allowedMethods can be set to array('*')
-    | to accept any value.
-    |
-    */
 
-    'paths' => ['https://myapil8.herokuapp.com/api/', 'sanctum/csrf-cookie'],
+    'paths' => ['*', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 
