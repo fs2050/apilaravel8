@@ -80,7 +80,7 @@
         <br>http://myapil8.herokuapp.com/api/login.
         <br>
       Na Header marcar os campos Key e Value com as seguintes informações:<br>
-      1° campo-> Key: Accept e value: application/json<br>
+      1° campo-> Key: Accept e Value: application/json<br>
       2° campo-> Key: Authorization e Value: Bearer + o Token recebido na hora do registro.
     </p>
     <hr>
