@@ -50,8 +50,6 @@ class PostController extends Controller
             [
                 'title' => 'required',
                 'content' => 'required',
-                'created_at' => 'required',
-                'updated_at' => 'required'
 
 
 
@@ -101,7 +99,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-
+        $input = $request->all();
         $input = $request->all();
 
         $validator = Validator::make(
@@ -121,7 +119,6 @@ class PostController extends Controller
 
         $post->title = $input['title'];
         $post->content = $input['content'];
-        $post->content = $input['created_at'];
         $post->save();
 
         return $this->successResponse(new PostResource($post), 'Post atualizado com sucesso!');
