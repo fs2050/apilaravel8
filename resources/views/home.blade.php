@@ -69,9 +69,9 @@
     <p class="lead">Rota de registro de usuário
         <br>http://myapil8.herokuapp.com/api/register.
         <br>
-        "name":"nome de usuário",
-        "email":"fabiolfs761@gmail.com",
-        "password":"123456789",
+        "name":"nome de usuário",<br>
+        "email":"fabiolfs761@gmail.com",<br>
+        "password":"123456789",<br>
         "password2":"123456789"
     </p>
     <p class="lead">
