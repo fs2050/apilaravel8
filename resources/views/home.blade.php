@@ -64,11 +64,18 @@
   </header>
 
   <main class="px-3">
-    <h1>PARA TESTAR ESS API É NECESSÁRIO QUE VOCE TENHA INSTADO O POSTMAN.</h1>
+    <h1>PARA TESTAR ESS API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h1>
     <p class="lead">Essas são as rotas para testes.</p>
-    <p class="lead">Rota de registro de usuário<br>http://myapil8.herokuapp.com/api/register.</p>
+    <p class="lead">Rota de registro de usuário
+        <br>http://myapil8.herokuapp.com/api/register.
+        <br>
+        "name":"nome de usuário",
+        "email":"fabiolfs761@gmail.com",
+        "password":"123456789",
+        "password2":"123456789"
+    </p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
+      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">Learn more</a>
     </p>
   </main>
 
