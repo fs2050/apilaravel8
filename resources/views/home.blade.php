@@ -94,7 +94,14 @@
         "content": " conteúdo do post"
     </p>
     <hr>
-    <p class="lead">Rota de Visualização dos dados
+    <p class="lead">Rota de Visualização dos Post
+        Verbo: Get
+        <br>http://myapil8.herokuapp.com/api/post.
+        <br>http://myapil8.herokuapp.com/api/post/1.(Post especifico)
+        <br>
+    </p>
+    <hr>
+    <p class="lead">Rota de Atualização dos dados
         Verbo: Get
         <br>http://myapil8.herokuapp.com/api/post.
         <br>
