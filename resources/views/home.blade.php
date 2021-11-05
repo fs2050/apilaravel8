@@ -94,6 +94,14 @@
         "content": " conteúdo do post"
     </p>
     <hr>
+    <p class="lead">Rota de Visualização dos dados
+        Verbo: Get
+        <br>http://myapil8.herokuapp.com/api/post.
+        <br>
+        "title": "Titulo do post",<br>
+        "content": " conteúdo do post"
+    </p>
+    <hr>
 
     <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">Learn more</a>
