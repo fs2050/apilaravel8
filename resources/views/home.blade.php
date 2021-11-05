@@ -64,7 +64,7 @@
   </header>
 
   <main class="px-3">
-    <h1>PARA TESTAR ESS API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h1>
+    <h1>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h1>
     <p class="lead">Essas são as rotas para testes.</p>
     <p class="lead">Rota de Registro de usuário
         Verbo: Post
@@ -102,11 +102,18 @@
     </p>
     <hr>
     <p class="lead">Rota de Atualização dos dados
-        Verbo: Get
+        Verbo: Patch
         <br>http://myapil8.herokuapp.com/api/post.
         <br>
-        "title": "Titulo do post",<br>
-        "content": " conteúdo do post"
+        "title": "Alterar dados do titulo",<br>
+        "content": " Alterar dados do conteudo"
+    </p>
+    <hr>
+    <p class="lead">Rota de Exclusão dos dados
+        Verbo: Patch
+        <br>http://myapil8.herokuapp.com/api/post/id-do_post.
+        <br>
+        
     </p>
     <hr>
 
