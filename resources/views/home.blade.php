@@ -66,14 +66,33 @@
   <main class="px-3">
     <h1>PARA TESTAR ESS API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h1>
     <p class="lead">Essas são as rotas para testes.</p>
-    <p class="lead">Rota de registro de usuário
+    <p class="lead">Rota de Registro de usuário
         <br>http://myapil8.herokuapp.com/api/register.
         <br>
         "name":"nome de usuário",<br>
-        "email":"fabiolfs761@gmail.com",<br>
+        "email":"e-mail do usuário",<br>
         "password":"123456789",<br>
         "password2":"123456789"
     </p>
+    <hr>
+    <p class="lead">Rota de Login de usuário
+        <br>http://myapil8.herokuapp.com/api/login.
+        <br>
+        "name":"nome de usuário",<br>
+        "email":"e-mail do usuário",<br>
+        "password":"123456789",<br>
+        "password2":"123456789"<br>
+        O usuário receberá um token.
+    </p>
+    <hr>
+    <p class="lead">Rota de Login de usuário
+        <br>http://myapil8.herokuapp.com/api/login.
+        <br>
+      Na Header marcar os campos Key e Value com as seguintes informações:<br>
+      1° campo-> Key: Accept e value: application/json
+      2° campo-> Key: Authorization e Value: Bearer + o Token recebido na hora do registro.
+    </p>
+    <hr>
     <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">Learn more</a>
     </p>
