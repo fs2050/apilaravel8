@@ -67,6 +67,7 @@
     <h1>PARA TESTAR ESS API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h1>
     <p class="lead">Essas são as rotas para testes.</p>
     <p class="lead">Rota de Registro de usuário
+        Verbo: Post
         <br>http://myapil8.herokuapp.com/api/register.
         <br>
         "name":"nome de usuário",<br>
@@ -77,6 +78,7 @@
     <hr>
 
     <p class="lead">Rota de Login de usuário
+        Verbo: Post
         <br>http://myapil8.herokuapp.com/api/login.
         <br>
       Na Header marcar os campos Key e Value com as seguintes informações:<br>
@@ -85,12 +87,14 @@
     </p>
     <hr>
     <p class="lead">Rota de Inserção dos dados
+        Verbo: Post
         <br>http://myapil8.herokuapp.com/api/post.
         <br>
         "title": "Titulo do post",<br>
         "content": " conteúdo do post"
     </p>
     <hr>
+
     <p class="lead">
       <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">Learn more</a>
     </p>
