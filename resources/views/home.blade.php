@@ -116,9 +116,9 @@
 
     </p>
     <hr>
-
+   <p>Frontend que está consumindo os dados da API</p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">Laravel 8 - API</a>
+      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">https://fvuejs.herokuapp.com/</a>
     </p>
   </main>
 
