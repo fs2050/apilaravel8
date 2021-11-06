@@ -113,17 +113,17 @@
         Verbo: Patch
         <br>http://myapil8.herokuapp.com/api/post/id-do_post.
         <br>
-        
+
     </p>
     <hr>
 
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">Learn more</a>
+      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-red">Laravel 8 - API</a>
     </p>
   </main>
 
   <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+    <p>Template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
   </footer>
 </div>
 
