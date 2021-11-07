@@ -80,10 +80,11 @@
             <h3>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h3>
             <br><br>
             <p class="lead">Essas são as rotas para testes.</p>
-            <p class="lead">Rota de Registro de usuário->
+            <p class="lead">Rota de Registro de usuário ->
                 Verbo: Post
                 <br>http://myapil8.herokuapp.com/api/register
                 <br>
+                <p>Campos:</p>
                 "name":"nome de usuário",<br>
                 "email":"e-mail do usuário",<br>
                 "password":" senha ",<br>
@@ -91,7 +92,7 @@
             </p>
             <hr>
 
-            <p class="lead">Rota de Login de usuário->
+            <p class="lead">Rota de Login de usuário ->
                 Verbo: Post
                 <br>http://myapil8.herokuapp.com/api/login
                 <br>
@@ -100,24 +101,24 @@
                 2° campo-> Key: Authorization e Value: Bearer + o Token recebido na hora do registro.
             </p>
             <hr>
-            <p class="lead">Rota de Inserção dos dados->
+            <p class="lead">Rota de Inserção dos dados ->
                 Verbo: Post
                 <br>http://myapil8.herokuapp.com/api/post
                 <br>
             <p>Campos:</p>
-            <br>
+
             "title": "Titulo do post",<br>
             "content": " Conteúdo do post"
             </p>
             <hr>
-            <p class="lead">Rota de Visualização dos Post->
+            <p class="lead">Rota de Visualização dos Post ->
                 Verbo: Get
                 <br>http://myapil8.herokuapp.com/api/post
                 <br>http://myapil8.herokuapp.com/api/post/(Post especifico)
                 <br>
             </p>
             <hr>
-            <p class="lead">Rota de Atualização dos dados->
+            <p class="lead">Rota de Atualização dos dados ->
                 Verbo: Patch
                 <br>http://myapil8.herokuapp.com/api/post
                 <br>
@@ -125,7 +126,7 @@
                 "content": " Alterar dados do conteudo"
             </p>
             <hr>
-            <p class="lead">Rota de Exclusão dos dados->
+            <p class="lead">Rota de Exclusão dos dados ->
                 Verbo: Delete
                 <br>http://myapil8.herokuapp.com/api/post/id-do_post.
                 <br>
