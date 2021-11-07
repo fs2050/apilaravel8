@@ -104,11 +104,7 @@
                 1° campo-> Key: Accept e Value: application/json<br>
                 2° campo-> Key: Authorization e Value: Bearer + o Token recebido na hora do registro.
             </p>
-               <p>No Body insira seu email e sua password</p><br>
-              {
-                   "email":"email123@email",<br>
-                   "password":"sua senha"
-              }
+
             <hr>
             <p class="lead">Rota de Inserção dos dados ->
                 Verbo: Post
@@ -151,7 +147,7 @@
             <p>Frontend que está consumindo os dados da API</p>
             <p class="lead">
 
-                   <a href="#"  class="btn btn-lg btn-secondary fw-bold border-white bg-red">https://fvuejs.herokuapp.com/</a>
+                   <a href="https://fvuejs.herokuapp.com/"  class="btn btn-lg btn-secondary fw-bold border-white bg-red">https://fvuejs.herokuapp.com/</a>
             </p>
         </main>
 
