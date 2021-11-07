@@ -105,8 +105,10 @@
                 2° campo-> Key: Authorization e Value: Bearer + o Token recebido na hora do registro.
             </p>
                <p>No Body insira seu email e sua password</p><br>
-               "email":"email123@email",<br>
-               "password":"sua senha"
+              {
+                   "email":"email123@email",<br>
+                   "password":"sua senha"
+              }
             <hr>
             <p class="lead">Rota de Inserção dos dados ->
                 Verbo: Post
