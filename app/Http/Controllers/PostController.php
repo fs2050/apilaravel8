@@ -25,7 +25,7 @@ class PostController extends Controller
         //return $posts->toJson();
 
 
-        return $this->successResponse(PostResource::collection($posts), 'Post enviado com sucesso!');
+        return $this->successResponse(PostResource::collection($posts), 'Posts encontrados!');
     }
 
 
