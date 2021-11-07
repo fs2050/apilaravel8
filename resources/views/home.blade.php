@@ -79,7 +79,7 @@
             <h1>API COM LARAVEL_8</h1><br>
             <h3>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h3>
             <br><br>
-            <p class="lead">Essas são as rotas para testes.</p>
+            <p class="lead"><u>Essas são as rotas para testes.</u></p>
             <p class="lead">Rota de Registro de usuário ->
                 Verbo: Post
                 <br>http://myapil8.herokuapp.com/api/register
