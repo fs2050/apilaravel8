@@ -79,7 +79,7 @@ class AuthController extends Controller
                 ];
             return $this->successResponse($response, "Login do Usuario com sucesso!");
         } else {
-            return $this->errorResponse("Seu e-mail ou senha não é válido!");
+            return $this->errorResponse('Seu e-mail ou senha não é válido!');
         }
     }
 }
