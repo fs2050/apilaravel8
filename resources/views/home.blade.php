@@ -75,7 +75,7 @@
             </div>
         </header>
 
-        <main class="px-3">
+        <main class="px-3"><br>
             <h1>API COM LARAVEL_8</h1><br>
             <h3>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h3>
             <br><br>
