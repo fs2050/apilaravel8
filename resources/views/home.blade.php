@@ -67,7 +67,7 @@
 
 
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <h3 class="float-md-start mb-0">API LARAVEL_8</h3>
+                    <h3 class="float-start">API LARAVEL_8</h3>
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="#">GITHUB</a>
                     <a class="nav-link" href="#">CONTATO</a>
