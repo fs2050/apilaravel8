@@ -76,7 +76,7 @@
         </header>
 
         <main class="px-3">
-            <h1>API LARAVEL_8</h1>
+            <h1>API COM LARAVEL_8</h1><br>
             <h3>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h3>
             <br><br>
             <p class="lead">Essas são as rotas para testes.</p>
@@ -106,7 +106,7 @@
                 <br>
             <p>Campos:</p>
             <br>
-            "title": "Titulo do post",
+            "title": "Titulo do post",<br>
             "content": " Conteúdo do post"
             </p>
             <hr>
