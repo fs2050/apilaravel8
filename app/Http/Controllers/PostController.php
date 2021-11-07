@@ -132,6 +132,6 @@ class PostController extends Controller
     {
 
         $post->delete();
-        return $this->successResposnse(new PostResource($post), 'Post deletado com sucesso!');
+        return $this->successResponse([], 'Post deletado com sucesso!');
     }
 }
