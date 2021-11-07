@@ -73,7 +73,7 @@ class AuthController extends Controller
             $user = Auth::user();
             $response =
                 [
-                   // 'token' => $user->createToken('fsCoding')->plainTextToken,
+                    'token' => $user->createToken('fsCoding')->plainTextToken,
                     'name' => $user->name,
                     'email' => $user->email
                 ];
