@@ -67,7 +67,7 @@
 
 
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <h3 class="float-start">API LARAVEL_8</h3>
+
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="#">GITHUB</a>
                     <a class="nav-link" href="#">CONTATO</a>
@@ -76,7 +76,8 @@
         </header>
 
         <main class="px-3">
-            <h1>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h1>
+            <h1>API LARAVEL_8</h1>
+            <h3>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h3>
             <br><br>
             <p class="lead">Essas são as rotas para testes.</p>
             <p class="lead">Rota de Registro de usuário
