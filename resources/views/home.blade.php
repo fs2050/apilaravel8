@@ -115,7 +115,7 @@
     </p>
     <hr>
     <p class="lead">Rota de Exclusão dos dados
-        Verbo: Patch
+        Verbo: Delete
         <br>http://myapil8.herokuapp.com/api/post/id-do_post.
         <br>
 
