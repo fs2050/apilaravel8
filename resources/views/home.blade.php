@@ -85,10 +85,14 @@
                 <br>http://myapil8.herokuapp.com/api/register
                 <br>
                 <p>Campos:</p>
+
+                {
                 "name":"nome de usuário",<br>
                 "email":"e-mail do usuário",<br>
                 "password":" senha ",<br>
                 "password2":" repita a senha"
+                }
+
             </p>
             <hr>
 
@@ -107,9 +111,9 @@
                 <br>
             <p>Campos:</p>
 
-            {
+            {<br>
                 "title": "Titulo do post",<br>
-                "content": " Conteúdo do post"
+                "content": " Conteúdo do post"<br>
             }
 
             </p>
