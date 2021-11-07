@@ -107,8 +107,11 @@
                 <br>
             <p>Campos:</p>
 
-            "title": "Titulo do post",<br>
-            "content": " Conteúdo do post"
+            {
+                "title": "Titulo do post",<br>
+                "content": " Conteúdo do post"
+            }
+
             </p>
             <hr>
             <p class="lead">Rota de Visualização dos Post ->
@@ -120,10 +123,13 @@
             <hr>
             <p class="lead">Rota de Atualização dos dados ->
                 Verbo: Patch
-                <br>http://myapil8.herokuapp.com/api/post
+                <br>http://myapil8.herokuapp.com/api/post/(id do post)
                 <br>
-                "title": "Alterar dados do titulo",<br>
-                "content": " Alterar dados do conteudo"
+                    {
+                        "title": "Alterar dados do titulo",<br>
+                        "content": " Alterar dados do conteudo"
+                    }
+
             </p>
             <hr>
             <p class="lead">Rota de Exclusão dos dados ->
