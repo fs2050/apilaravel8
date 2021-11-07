@@ -55,6 +55,7 @@
   <header class="mb-auto">
     <div>
       <h3 class="float-md-start mb-0">API LARAVEL_8</h3>
+      <br><br>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="#">GITHUB</a>
@@ -65,21 +66,22 @@
 
   <main class="px-3">
     <h1>PARA TESTAR ESSA API É NECESSÁRIO QUE VOCE TENHA INSTALADO O POSTMAN OU INSOMNIA.</h1>
+    <br><br>
     <p class="lead">Essas são as rotas para testes.</p>
     <p class="lead">Rota de Registro de usuário
         Verbo: Post
-        <br>http://myapil8.herokuapp.com/api/register.
+        <br>http://myapil8.herokuapp.com/api/register
         <br>
         "name":"nome de usuário",<br>
         "email":"e-mail do usuário",<br>
-        "password":"123456789",<br>
-        "password2":"123456789"
+        "password":" senha ",<br>
+        "password2":" repita a senha"
     </p>
     <hr>
 
     <p class="lead">Rota de Login de usuário
         Verbo: Post
-        <br>http://myapil8.herokuapp.com/api/login.
+        <br>http://myapil8.herokuapp.com/api/login
         <br>
       Na Header marcar os campos Key e Value com as seguintes informações:<br>
       1° campo-> Key: Accept e Value: application/json<br>
@@ -88,22 +90,25 @@
     <hr>
     <p class="lead">Rota de Inserção dos dados
         Verbo: Post
-        <br>http://myapil8.herokuapp.com/api/post.
+        <br>http://myapil8.herokuapp.com/api/post
         <br>
+        <p>Campos</p>
+        <br>
+
         "title": "Titulo do post",<br>
         "content": " conteúdo do post"
     </p>
     <hr>
     <p class="lead">Rota de Visualização dos Post
         Verbo: Get
-        <br>http://myapil8.herokuapp.com/api/post.
-        <br>http://myapil8.herokuapp.com/api/post/1.(Post especifico)
+        <br>http://myapil8.herokuapp.com/api/post
+        <br>http://myapil8.herokuapp.com/api/post/(Post especifico)
         <br>
     </p>
     <hr>
     <p class="lead">Rota de Atualização dos dados
         Verbo: Patch
-        <br>http://myapil8.herokuapp.com/api/post.
+        <br>http://myapil8.herokuapp.com/api/post
         <br>
         "title": "Alterar dados do titulo",<br>
         "content": " Alterar dados do conteudo"
@@ -123,7 +128,7 @@
   </main>
 
   <footer class="mt-auto text-white-50">
-    <p>Template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+    <p>Template for <a href="#" class="text-white">Bootstrap</a>, by <a href="#" class="text-white">@mdo</a>.</p>
   </footer>
 </div>
 
