@@ -111,9 +111,9 @@
                 <br>
             <p>Campos:</p>
 
-            {<br>
+            {
                 "title": "Titulo do post",<br>
-                "content": " Conteúdo do post"<br>
+                "content": " Conteúdo do post"
             }
 
             </p>
