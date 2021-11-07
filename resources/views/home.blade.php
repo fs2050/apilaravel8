@@ -88,7 +88,7 @@
 
                 {
                 "name":"nome de usuário",<br>
-                "email":"e-mail do usuário",<br>
+                "email":"email123@email",<br>
                 "password":" senha ",<br>
                 "password2":" repita a senha"
                 }
